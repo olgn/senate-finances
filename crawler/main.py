@@ -5,7 +5,7 @@ agree(browser)
 
 # collect all of the public transaction record links
 # to investigate
-# collect_ptr_links(browser)
+collect_ptr_links(browser)
 
 # crawl each public transaction record to populate
 # the database with individual transactions
