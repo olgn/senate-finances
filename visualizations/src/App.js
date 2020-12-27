@@ -1,11 +1,13 @@
 import React from 'react';
-import './App.css';
 import Network from './components/features/network/Network';
+import SQLiteContextProvider from './components/wrappers/SQLiteContext';
 
 function App() {
   return (
     <div className="App">
-      <Network />
+      <SQLiteContextProvider>
+        <Network />
+      </SQLiteContextProvider>
     </div>
   );
 }
