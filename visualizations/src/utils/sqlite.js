@@ -3,11 +3,11 @@ const resultsToData = (results) => {
         return []
     }
     const { columns, values } = results[0]
-    return values.map(value => {
+    return values.map((value) => {
         return columns.reduce((acc, curr, idx) => {
             return {
                 ...acc,
-                [curr]: value[idx]
+                [curr]: value[idx],
             }
         }, {})
     })

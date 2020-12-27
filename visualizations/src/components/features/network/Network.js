@@ -18,7 +18,10 @@ const Network = () => {
 
     return (
         <div className="networkWrapper">
-            <Table columns={resultsToColumnData(results)} data={resultsToData(results)}/>
+            <Table
+                columns={resultsToColumnData(results)}
+                data={resultsToData(results)}
+            />
         </div>
     )
 }

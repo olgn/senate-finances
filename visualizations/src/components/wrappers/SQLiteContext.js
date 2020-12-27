@@ -9,14 +9,15 @@ const SQLiteContextProvider = ({ children }) => {
 
     useLayoutEffect(() => {
         initSqlJs()
-            .then(SQL =>
+            .then((SQL) =>
                 fetch(`${process.env.PUBLIC_URL}/db.sqlite`)
-                    .then(response => response.arrayBuffer()).then(buff => {
+                    .then((response) => response.arrayBuffer())
+                    .then((buff) => {
                         const uInt8Array = new Uint8Array(buff)
                         setDb(new SQL.Database(uInt8Array))
                     })
             )
-            .catch(err => setErr(err))
+            .catch((err) => setErr(err))
     }, [])
 
     if (!db) return <pre>Loading...</pre>
